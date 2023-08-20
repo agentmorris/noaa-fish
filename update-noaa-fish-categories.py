@@ -184,8 +184,8 @@ for category_name in new_category_name_to_id:
                            'id':new_category_name_to_id[category_name]})
 
 d['categories'] = new_categories
-
 d['info']['version'] = '202.08.19.00'
+
 
 #%% Write the new .json file
 
@@ -234,3 +234,29 @@ from md_utils.path_utils import zip_file
 
 zip_file(output_file, verbose=True)
 assert os.path.isfile(output_file + '.zip')
+
+
+#%% Scrap
+
+if False:
+    
+    pass
+
+    #%%
+    
+    target_id = 'SD42_370_8_15_2018_5_73.29.jpg'
+    
+    with open(new_annotations_file,'r') as f:
+        new_annotations = json.load(f)
+
+    # im = new_annotations['images'][0]
+    target_im = None
+    for im in new_annotations['images']:
+        if target_id in im['id']:
+            target_im = im
+            break
+    assert target_im is not None
+    
+    
+    #%%
+    
