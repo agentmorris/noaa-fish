@@ -1,0 +1,4 @@
+spyder
+megadetector
+tqdm
+pandas
