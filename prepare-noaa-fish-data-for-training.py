@@ -541,5 +541,3 @@ yolo detect train data="/home/user/data/noaa-fish/dataset.yaml" model=yolov8n.pt
 # 1280 model coming out soon
 #
 # https://github.com/ultralytics/ultralytics/issues/338
-
-

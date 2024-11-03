@@ -299,7 +299,7 @@ with open(output_json_fn,'w') as f:
     json.dump(d,f,indent=1)
 
 
-#%%
+#%% Load the output json
 
 import os
 import json
@@ -343,7 +343,6 @@ assert 'unknown' not in location_to_count.keys()
 #%% Preview some images
 
 from visualization import visualize_db
-from path_utils import open_file
 
 viz_options = visualize_db.DbVizOptions()
 viz_options.num_to_visualize = 10000
@@ -415,3 +414,24 @@ d['info']['version'] = '2023.03.10.00'
 
 with open(filter_json_fn,'w') as f:
     json.dump(d,f,indent=2)
+
+
+#%% For posterity, I'm 99.999999% sure these were the location IDs used for splitting
+
+"""
+Location IDs in split train:
+
+loc_bcc8a0b0-1207-11ed-b5a0-5cf3706028c2
+loc_bca6b86b-1207-11ed-b9f9-5cf3706028c2
+loc_bc90692b-1207-11ed-bf3d-5cf3706028c2
+loc_bcade628-1207-11ed-944d-5cf3706028c2
+loc_bc8df6bd-1207-11ed-8899-5cf3706028c2
+loc_bccc994d-1207-11ed-988e-5cf3706028c2
+loc_bc9ddc8c-1207-11ed-9b99-5cf3706028c2
+loc_bcb89731-1207-11ed-9917-5cf3706028c2
+
+Location IDs in split val:
+
+loc_bcbd2c38-1207-11ed-ba02-5cf3706028c2
+loc_bcbc68ad-1207-11ed-9e83-5cf3706028c2
+"""
